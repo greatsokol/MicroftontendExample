@@ -9,7 +9,5 @@ import {AuthService} from "@@auth-lib";
 export class ExampleComponentComponent {
   authService = inject(AuthService);
   constructor() {
-    //console.log("EXAMPLE", this.authService);
-    debugger;
   }
 }
