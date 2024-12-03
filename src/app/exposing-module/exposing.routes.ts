@@ -5,7 +5,7 @@ import {canActivate} from "./auth.guard";
 export const FLIGHTS_ROUTES: Routes = [
   {
     path: '',
-    canActivate: [canActivate],
+    //canActivate: [canActivate],
     component: ExampleComponentComponent
   }
 ];
