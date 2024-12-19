@@ -7,13 +7,15 @@ import {ExposingModule} from "./exposing-module/exposing.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {appConfig} from "../config";
 import {AuthModule} from "@@auth-lib";
+import {ExampleComponentComponent} from "./exposing-module/example-component/example-component.component";
 
 @NgModule({
   imports: [
     AuthModule,
     BrowserModule,
     ExposingModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    ExampleComponentComponent
   ],
   declarations: [
     AppComponent

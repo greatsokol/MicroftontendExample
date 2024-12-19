@@ -4,8 +4,8 @@ import {AuthService} from '@@auth-lib';
 
 export const canActivate: CanActivateFn = () => {
   return new Promise((resolve, reject) => {
-     const authService = (inject(AuthService));
-     return authService.isLoggedIn();
+    const authService = (inject(AuthService));
+    return authService.isLoggedIn();
   });
 }
 
