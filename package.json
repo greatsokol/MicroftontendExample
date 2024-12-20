@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve mf-example",
+    "start": "ng build auth-lib && ng serve mf-example",
     "serve:prod": "node scripts/serve.js",
     "build": "ng build auth-lib && ng build mf-example",
     "watch": "ng build --watch --configuration development",
