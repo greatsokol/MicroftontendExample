@@ -1,21 +1,24 @@
-<div class="w-auto p-3 h-auto d-inline-block">
+<div class="w-auto p-3 h-auto d-inline-block" *ngIf="authService.getAuthContext() as service">
   <div class="card">
     <div class="card-body test-authorities-rendered">
       <h1 class="card-title">Microfrontend example</h1>
       <h2 class="card-text">LOGGED IN:
         <span class="badge text-bg-primary m-1">successfully</span>
       </h2>
-      <h2 class="card-text">USERNAME: {{ authService.getAuthContext()?.userName }}</h2>
+      <h2 class="card-text">USERNAME: {{ service.userName }}</h2>
 
       <h2>AUTHORITIES
-        <span *ngFor="let authority of authService.getAuthContext()?.userRoles"
+        <span *ngFor="let authority of service.userRoles"
               class="badge text-bg-success m-1">
           {{ authority }}
         </span>
       </h2>
 
-      <button (click)="authService.getAuthContext()?.logoutFunc()" class="btn btn-outline-dark">Logout
-        <span class="badge text-bg-primary">{{ this.authService.getAuthContext()?.userName }}</span>
+      <button (click)="service.logoutFunc()" class="btn btn-outline-dark">Logout
+        <span class="badge text-bg-primary">{{ this.service.userName }}</span>
+      </button>
+      <button routerLink="secondComponent" class="btn btn-outline-dark">
+        <span class="badge text-bg-secondary">Next authorized component</span>
       </button>
     </div>
   </div>

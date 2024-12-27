@@ -27,7 +27,7 @@ describe("ExampleComponent", () => {
 
   it("should render authorities if logged in", () => {
     const fixture = TestBed.createComponent(ExampleComponentComponent);
-    fixture.componentInstance.authService.isLoggedIn = jasmine.createSpy().and.returnValue(true);
+    fixture.componentInstance.authService.isAuthenticated = jasmine.createSpy().and.returnValue(true);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector(".test-authorities-rendered")).toBeTruthy();
@@ -35,7 +35,7 @@ describe("ExampleComponent", () => {
 
   it("should render spinner if NOT logged in", () => {
     const fixture = TestBed.createComponent(ExampleComponentComponent);
-    fixture.componentInstance.authService.isLoggedIn = jasmine.createSpy().and.returnValue(false);
+    fixture.componentInstance.authService.isAuthenticated = jasmine.createSpy().and.returnValue(false);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector(".test-spinner")).toBeTruthy();

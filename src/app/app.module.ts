@@ -6,8 +6,9 @@ import {RouterModule} from "@angular/router";
 import {ExposingModule} from "./exposing-module/exposing.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {appConfig} from "../config";
-import {AuthModule} from "@@auth-lib";
 import {ExampleComponentComponent} from "./exposing-module/example-component/example-component.component";
+import {MainComponentComponent} from "./exposing-module/main-component/main-component.component";
+import {AuthModule} from "@@auth-lib";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {ExampleComponentComponent} from "./exposing-module/example-component/exa
     BrowserModule,
     ExposingModule,
     RouterModule.forRoot(APP_ROUTES),
-    ExampleComponentComponent
+    ExampleComponentComponent,
+    MainComponentComponent
   ],
   declarations: [
     AppComponent

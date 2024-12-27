@@ -1,17 +1,15 @@
 import {Component, inject} from "@angular/core";
+import {CommonModule, NgFor} from "@angular/common";
+import {RouterLink} from "@angular/router";
 import {AuthService} from "@@auth-lib";
-import {NgFor} from "@angular/common";
 
 
 @Component({
   selector: "example-component",
   templateUrl: "./example-component.component.html",
   standalone: true,
-  imports: [NgFor]
+  imports: [CommonModule, NgFor, RouterLink]
 })
 export class ExampleComponentComponent {
-  authService = inject(AuthService);
-
-  constructor() {
-  }
+  authService: AuthService = inject(AuthService);
 }
