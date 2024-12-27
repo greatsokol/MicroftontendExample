@@ -6,12 +6,12 @@ import {OAuthModule} from "angular-oauth2-oidc";
   imports: [
     HttpClientModule,
     OAuthModule.forRoot(
-      //   {
-      //   resourceServer:{
-      //     allowedUrls: ["http"],
-      //     sendAccessToken: true
-      //   }
-      // }
+      {
+        resourceServer: {
+          allowedUrls: ["http"],
+          sendAccessToken: true
+        }
+      }
     ),
   ]
 })
